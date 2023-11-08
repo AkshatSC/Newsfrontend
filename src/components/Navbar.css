@@ -1,96 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap');
-
 body{
-
-    font-family: 'Urbanist', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    box-sizing: border-box;
+    margin:20px 0;
 }
-
 a{
-
     text-decoration: none;
     color: currentColor;
 }
 
+.mydiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 a:hover{
-
-    color: currentColor;
+    color: #eb1607;
 }
 
 header{
-
-    width: 100vw;
-    height: 100px;
+    width: 80vw;
+    height: 69px;
     background-color: #fff;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 header .container-fluid{
 
     width: 100%;
-    padding: 0 60px;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-@media(max-width:992px){
+/* @media(max-width:992px){
 
     header .container-fluid{
 
         padding: 0 5%;
     }
-}
+} */
 
 header .navb-logo img{
 
-    width: 140px;
-    height: 66px;
+    width: 60px;
+    height: 40px;
+}
+.navb-logo{
+  align-self: flex-start;
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 7px;
 }
 
 header .navb-items{
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
     letter-spacing: 3px;
+    flex: 0 0 50%;
 }
 
 header .item{
 
     text-align: center;
-    margin-inline: 15%;
-    font-size: 20px;
+    margin-inline: 3%;
+    font-size: 15px;
     letter-spacing: 3px;
     color: #102447;
     padding: 5px 0;
     transition: all .1s ease;
-    border-bottom: 0px solid #64d6f4;
-    border-top: 0px solid #64d6f4;
     cursor: pointer;
 }
 
-header .item:hover{
 
-    border-bottom: 3px solid #64d6f4;
-    border-top: 3px solid #64d6f4;
-}
-
-header .item-button a{
-
-    background-color: #274d8a;
-    width: 150px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    transition: all .5s ease;
-}
 
 header .item-button a:hover{
 
@@ -98,7 +85,7 @@ header .item-button a:hover{
 }
 
 header .mobile-toggler{
-
+    display: none;
     font-size: 30px;
 }
 
@@ -110,12 +97,45 @@ header .mobile-toggler{
     width: 430px;
 }
 
-@media(max-width: 450px){
+@media(max-width: 600px){
 
+  .mydiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .navb-logo img {
+    width: 47px;
+    height: 32px;
+}
+
+  header{
+      width: 91vw;
+      height: 69px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      /* padding: 10px; */
+  }
+
+    header .mobile-toggler{
+        display: inline;
+        font-size: 30px;
+    }
     .modal-dialog{
 
         width: 82%;
     }
+    .item{
+      display: none;
+    }
+    body{
+        /* overflow-x: hidden; */
+        box-sizing: border-box;
+        margin:5px 0;
+    }
+
+
 }
 
 .modal-content{
@@ -123,17 +143,16 @@ header .mobile-toggler{
     border-radius: 0;
     height: 100vh;
     overflow-y: scroll;
-    background-color: #102447;
+    background-color: white;
 }
 
 .modal-header{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 88%;
     margin: 0 auto;
-    padding-bottom: 16px;
+    padding-bottom: 0px;
     border-bottom: 2px solid #fefefe;
 }
 
@@ -152,7 +171,7 @@ header .mobile-toggler{
 
 .modal-header i{
 
-    color: #fefefe;
+    color: #black;
     font-size: 30px;
 }
 
@@ -160,7 +179,7 @@ header .mobile-toggler{
 
     width: 88%;
     margin: 0 auto;
-    padding: 75px 0 0 0;
+    padding: 50px 0 0 0;
     flex: unset;
 }
 
@@ -180,16 +199,16 @@ header .mobile-toggler{
 
 .modal-body .modal-line:hover{
 
-    color: #fefefe;
+    color: black;
     border-bottom: 1px solid #fefefe;
 }
 
 .modal-line a{
 
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 700;
     letter-spacing: 2.5px;
-    color: #fefefe;
+    color: black;
 }
 
 .modal-line i{
@@ -259,7 +278,10 @@ header .mobile-toggler{
     text-align: center;
 }
 
-@media(max-width:767px){
+
+
+
+/* @media(max-width:767px){
 
     .section-1 p{
 
@@ -268,4 +290,4 @@ header .mobile-toggler{
         width: 70%;
         margin: auto;
     }
-}
+} */
